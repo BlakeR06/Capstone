@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="https://script.google.com/macros/s/AKfycbzi-exCjX_JMQWolXjOzQoKW6UO43miPeaUSB1ajFILMQYm8h6jn-45KvRcMwQcquA/exec" method="post" id="pageLoadedForm" class="hiddenForm">
+        <input type="text" name="PageLoaded" value="pageLoaded" readonly>
+    </form>
+
+    <form action="https://script.google.com/macros/s/AKfycbzi-exCjX_JMQWolXjOzQoKW6UO43miPeaUSB1ajFILMQYm8h6jn-45KvRcMwQcquA/exec" method="post" id="rowCounterForm" class="hiddenForm">
+        <input type="text" name="AmountOfRows" id="amountOfRows" value="" readonly>
+    </form>
+
+    <div id="loadingIndicator">Loading...</div>
+    <div id="loadingCover"></div>
+
+    <div class="topBar">
+        <div class="topBarText">Media</div>
+        <div class="topBarText" id="userName"></div>
+    </div>
+
+    <div class="bottomBar">
+        <div class="bottomBarIcon" id="globalIcon"></div>
+        <div class="bottomBarIcon" id="newIcon" onclick="NewPostContainer()"></div>
+        <div class="bottomBarIcon" id="userIcon"></div>
+    </div>
+
+    <div class="contentContainer">
+
+        <div class="newPostContainer" id="newPostContainer">
+            <div class="header3">New Post</div>
+            <form action="https://script.google.com/macros/s/AKfycbzi-exCjX_JMQWolXjOzQoKW6UO43miPeaUSB1ajFILMQYm8h6jn-45KvRcMwQcquA/exec" id="newPostForm" method="post">
+                <input type="text" name="NewPostInput" id="newPostInput" placeholder="Type new post here..." required>
+                <input type="text" name="NewPostUsername" id="newPostUsername" readonly>
+                <label for="PrivateCheckbox">Make this post private?</label>
+                <input type="checkbox" name="PrivateCheckbox" id="privateCheckbox">
+                <div><button class="button2" onclick="CreateNewPost(event)">Post</button></div>
+            </form>
+        </div>
+
+        <div class="globalPostsContainer" id="globalPostsContainer"></div>
+
+        <div id="accountContainer">
+            <div id="usersPostsContainer"></div>
+            <div id="usersPrivatePostsContainer"></div>
+        </div>
+
+        <div class="privatePostsIcon" id="privateIcon"></div>
+
+    </div>
+
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">Media</div>
+
+    <div class="treeBg"></div>
+
+    <div id="loadingIndicator">Loading...</div>
+    <div id="loadingCover"></div>
+
+    <div class="loginContainer" id="loginContainer">
+        <form id="loginForm" action="https://script.google.com/macros/s/AKfycbzi-exCjX_JMQWolXjOzQoKW6UO43miPeaUSB1ajFILMQYm8h6jn-45KvRcMwQcquA/exec" method="post">
+            <div class="header1">Log in</div>
+            <div class="header2 marginTop1">Username</div>
+            <input type="text" name="UsernameLogin" id="usernameLogin" required>
+            <div class="header2 marginTop2">Password</div>
+            <input type="password" name="PasswordLogin" id="passwordLogin" required>
+            <div><button class="button1" onclick="CheckForAccount(event)">Log in</button></div>
+            <button class="button1" onclick="SwitchToCreateAccount()">Create Account</button>
+        </form>
+    </div>
+
+    <div class="loginContainer" id="signUpContainer">
+        <form id="signupForm" action="https://script.google.com/macros/s/AKfycbzi-exCjX_JMQWolXjOzQoKW6UO43miPeaUSB1ajFILMQYm8h6jn-45KvRcMwQcquA/exec" method="post">
+            <div class="header1">Create Account</div>
+            <div class="header2 marginTop1">New Username</div>
+            <input type="text" name="CreateUsernameInput" id="usernameSignUp" required>
+            <div class="header2 marginTop2">Create Password</div>
+            <input type="password" name="CreatePasswordInput" id="passwordSignUp" required>
+            <div><button class="button1" onclick="CreateAccount(event)">Create Account</button></div>
+            <button class="button1" onclick="SwitchToLogin()">Back to Login</button>
+        </form>
+    </div>
+
+</body>
+<script src="signIn.js"></script>
+</html>
